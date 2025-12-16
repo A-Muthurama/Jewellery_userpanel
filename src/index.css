@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Default Dark Mode (Premium Black/Gold) */
+  --color-gold-primary: #D4AF37;
+  --color-gold-light: #F4E5BC;
+  --color-gold-dark: #AA8C2C;
+  --color-black-rich: #0A0A0A;
+  --color-black-soft: #1A1A1A;
+  --color-gray-dark: #2A2A2A;
+  --color-white: #FFFFFF;
+  --color-white-muted: #E0E0E0;
+
+  --bg-primary: var(--color-black-rich);
+  --bg-secondary: var(--color-black-soft);
+  --bg-tertiary: var(--color-gray-dark);
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-white-muted);
+  --border-color: var(--color-gray-dark);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  /* Hero Variables - Dark Mode */
+  --hero-bg-image: url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=2000');
+  --hero-overlay: linear-gradient(to bottom, rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.9));
+  --hero-text-color: #FFFFFF;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+
+  --transition-smooth: all 0.3s ease;
+}
+
+[data-theme="light"] {
+  /* Gold - Darker for visibility */
+  --color-gold-primary: #B8860B;
+  --color-gold-light: #E6C200;
+  --color-gold-dark: #8B6508;
+
+  /* Premium Light Theme (Warm Ivory/Pearl) */
+  --color-black-rich: #FFFFFF;
+  --color-black-soft: #F9F8F4;
+  --color-gray-dark: #E8E6DF;
+  --color-white: #1C1917;
+  --color-white-muted: #57534E;
+
+  --bg-primary: #FFFCF5;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F0EFE9;
+
+  --text-primary: #292524;
+  --text-secondary: #57534E;
+  --border-color: #D6D3C0;
+  --card-shadow: 0 4px 15px rgba(168, 162, 158, 0.15);
+
+  /* Hero Variables - Light Mode */
+  /* Using a rich gold jewellery image for premium light mode feel */
+  --hero-bg-image: url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=2000');
+  --hero-overlay: linear-gradient(to bottom, rgba(255, 252, 245, 0.85), rgba(255, 252, 245, 0.4));
+  --hero-text-color: #292524;
+  /* Dark text for light background */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-gold-primary);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-dark));
+  color: #0A0A0A;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-smooth);
+}
+
+[data-theme="light"] .btn-primary {
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-gold-primary);
+  color: var(--color-gold-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.btn-outline:hover {
+  background: var(--color-gold-primary);
+  color: var(--bg-primary);
+}
+
+[data-theme="light"] .btn-outline:hover {
+  color: #FFFFFF;
+}
+
+/* Common Card Styles using semantic vars */
+.card-base {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+}
