@@ -136,8 +136,8 @@ const FilterBar = ({ categories, locations, onFilterChange }) => {
                     onChange={(e) => handleChange('sort', e.target.value)}
                     className="filter-select with-icon"
                   >
-                    <option value="discount_high">Discount: High to Low</option>
-                    <option value="discount_low">Discount: Low to High</option>
+                    <option value="discount_high">Offer: High to Low</option>
+                    <option value="discount_low">Offer: Low to High</option>
                     <option value="newest">Newest First</option>
                   </select>
                 </div>
