@@ -1,14 +1,16 @@
-/* OfferDetails Styles */
+/* ===============================
+   Offer Details – Global
+================================ */
+
 .offer-details-page {
-    padding-bottom: 6rem;
-    /* Space for fixed mobile footer if needed */
+    padding-bottom: env(safe-area-inset-bottom);
     animation: fadeIn 0.4s ease;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(12px);
     }
 
     to {
@@ -17,11 +19,21 @@
     }
 }
 
-/* Image Section */
+/* Content Width Control */
+.details-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===============================
+   Hero Image Section
+================================ */
+
 .details-hero {
     position: relative;
-    height: 400px;
-    border-radius: 12px;
+    aspect-ratio: 16 / 9;
+    max-height: 420px;
+    border-radius: 14px;
     overflow: hidden;
     margin-bottom: 2rem;
     box-shadow: var(--card-shadow);
@@ -35,58 +47,67 @@
 
 .details-badge {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: rgba(10, 10, 10, 0.85);
+    top: 1.25rem;
+    right: 1.25rem;
+    background: rgba(15, 15, 15, 0.85);
     color: var(--color-gold-primary);
-    padding: 0.5rem 1.2rem;
+    padding: 0.45rem 1.1rem;
     border-radius: 30px;
     font-weight: 600;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    backdrop-filter: blur(6px);
 }
 
-[data-theme="light"] .details-badge {
-    background: rgba(255, 255, 255, 0.95);
-    color: #0A0A0A;
-}
+/* ===============================
+   Main Layout
+================================ */
 
-/* Info Section */
 .details-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
 }
 
+/* ===============================
+   Main Info
+================================ */
+
 .main-info h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    word-break: break-word;
 }
 
 .shop-link {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
+/* ===============================
+   Discount Banner
+================================ */
+
 .discount-banner {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.12),
+            rgba(212, 175, 55, 0.05));
+    border: 1px solid rgba(212, 175, 55, 0.35);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 14px;
     text-align: center;
     margin-bottom: 2rem;
 }
 
 .big-discount {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--color-gold-primary);
+    font-size: 3.4rem;
     font-weight: 700;
+    color: var(--color-gold-primary);
     line-height: 1;
     margin-bottom: 0.5rem;
 }
@@ -94,49 +115,62 @@
 .discount-type {
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    font-size: 0.9rem;
     font-weight: 600;
 }
 
+/* ===============================
+   Description
+================================ */
+
 .description-box h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--color-gold-primary);
 }
 
 .description-text {
+    font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    font-size: 1.05rem;
 }
 
-/* Side Card */
+/* ===============================
+   Sidebar Card
+================================ */
+
 .details-sidebar .card-base {
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 14px;
     position: sticky;
-    top: 100px;
+    top: 96px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
 }
 
 .validity-block {
     text-align: center;
-    margin-bottom: 2rem;
     padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .validity-label {
-    display: block;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    display: block;
 }
 
 .validity-date {
     font-size: 1.2rem;
-    color: var(--text-primary);
     font-weight: 600;
+    color: var(--text-primary);
 }
+
+/* ===============================
+   Buttons
+================================ */
 
 .action-buttons {
     display: flex;
@@ -146,7 +180,8 @@
 
 .btn-full {
     width: 100%;
-    padding: 1rem;
+    min-height: 44px;
+    padding: 0.9rem 1rem;
     border-radius: 8px;
     font-weight: 600;
     display: flex;
@@ -154,7 +189,7 @@
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .btn-share {
@@ -167,62 +202,119 @@
     background: var(--border-color);
 }
 
+/* ===============================
+   Mobile Validity Label
+================================ */
+
+.mobile-validity {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--bg-tertiary);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   Tablet (≤1024px)
+================================ */
+
+@media (max-width: 1024px) {
+    .details-content {
+        grid-template-columns: 1.4fr 1fr;
+        gap: 2rem;
+    }
+
+    .big-discount {
+        font-size: 3rem;
+    }
+
+    .details-sidebar .card-base {
+        position: static;
+    }
+}
+
+/* ===============================
+   Mobile (≤768px)
+================================ */
+
 @media (max-width: 768px) {
     .details-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
+    .details-wrapper {
+        padding-bottom: 8rem;
+        /* Ensure content clears the fixed footer */
+    }
+
     .details-hero {
-        height: 300px;
+        max-height: 260px;
     }
 
     .main-info h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .big-discount {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
-    /* Fixed bottom bar for mobile */
+    .mobile-validity {
+        display: flex;
+    }
+
+    /* Sticky Bottom Action Bar */
     .details-sidebar .card-base {
         position: fixed;
         bottom: 0;
+        top: auto;
+        /* Reset top to prevent stretching */
         left: 0;
         right: 0;
         z-index: 100;
-        border-radius: 20px 20px 0 0;
-        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 1.5rem;
-        background-color: var(--bg-secondary);
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 16px 16px 0 0;
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.12);
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom));
     }
 
-    .validity-block {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: none;
-        text-align: left;
-    }
-
-    .validity-label {
-        font-size: 0.75rem;
-    }
-
-    .validity-date {
-        font-size: 1rem;
+    .details-sidebar .validity-block {
+        display: none !important;
     }
 
     .action-buttons {
         flex-direction: row;
+        width: 100%;
     }
 
-    .btn-share {
-        width: auto;
-        padding: 0.8rem;
+    .btn-full {
+        flex: 1;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===============================
+   Small Mobile (≤360px)
+================================ */
+
+@media (max-width: 360px) {
+    .big-discount {
+        font-size: 1.9rem;
+    }
+
+    .btn-full {
+        font-size: 0.85rem;
+        padding: 0.65rem;
     }
 }

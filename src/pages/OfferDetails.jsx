@@ -63,6 +63,10 @@ const OfferDetails = () => {
                         <div className="discount-type">{offer.discountType}</div>
                     </div>
 
+                    <div className="mobile-validity">
+                        <Calendar size={16} /> Valid Until: <strong>{offer.validUntil}</strong>
+                    </div>
+
                     <div className="description-box">
                         <h3>About This Offer</h3>
                         <p className="description-text">{offer.description}</p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import OfferCard from '../components/OfferCard';
+import PriceTicker from '../components/PriceTicker';
 import { OFFERS } from '../data/mockData';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -22,10 +23,13 @@ const Home = () => {
             <Link to="/offers" className="btn-primary">Explore Offers</Link>
             <button className="btn-outline">Learn More</button>
           </div>
+
+
         </div>
       </section>
 
       <main className="container section">
+        <PriceTicker />
         <div className="section-header">
           <h2 className="section-title">Featured Offers</h2>
           <Link to="/offers" className="view-all-link">
