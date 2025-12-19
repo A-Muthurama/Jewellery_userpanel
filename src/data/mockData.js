@@ -15,7 +15,7 @@ export const OFFERS = [
     discountValueNumeric: 20,
     price: 50000,
     description: "Flat 20% off on Gold Making Charges. Limited time offer on wedding collections.",
-    validUntil: "2024-12-31",
+    validUntil: "2025-12-31",
     image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=1000",
     isFeatured: true
   },
@@ -35,7 +35,7 @@ export const OFFERS = [
     discountValueNumeric: 5000,
     price: 75000,
     description: "Get flat ₹5000 off on diamond necklace sets above ₹50k.",
-    validUntil: "2024-12-25",
+    validUntil: "2025-12-25",
     image: "https://images.unsplash.com/photo-1600119612651-0db31b3a7baa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amV3ZWxzfGVufDB8fDB8fHww",
     isFeatured: true
   },
@@ -55,7 +55,7 @@ export const OFFERS = [
     discountValueNumeric: 25,
     price: 120000,
     description: "Special discount on Gemstone collections. Explore the royal vibes.",
-    validUntil: "2025-01-10",
+    validUntil: "2026-01-10",
     image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=1000",
     isFeatured: false
   },
@@ -75,7 +75,7 @@ export const OFFERS = [
     discountValueNumeric: 50,
     price: 5000,
     description: "Buy 1 Get 1 Free on select Silver articles.",
-    validUntil: "2024-12-20",
+    validUntil: "2026-12-20",
     image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&q=80&w=1000",
     isFeatured: false
   },
@@ -95,7 +95,7 @@ export const OFFERS = [
     discountValueNumeric: 15,
     price: 45000,
     description: "15% off on Gold Coins and Bars.",
-    validUntil: "2024-12-30",
+    validUntil: "2025-12-30",
     image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amV3ZWxzfGVufDB8fDB8fHww",
     isFeatured: true
   },
@@ -115,7 +115,7 @@ export const OFFERS = [
     discountValueNumeric: 10,
     price: 60000,
     description: "10% discount on all diamond jewellery.",
-    validUntil: "2025-01-05",
+    validUntil: "2026-01-05",
     image: "https://images.unsplash.com/photo-1705575518997-82a71bcc75a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRpYW1vbmR8ZW58MHx8MHx8fDA%3D",
     isFeatured: false
   },
@@ -135,7 +135,7 @@ export const OFFERS = [
     discountValueNumeric: 2000,
     price: 25000,
     description: "Special offer for Pune Kothrud branch.",
-    validUntil: "2025-01-15",
+    validUntil: "2026-01-15",
     image: "https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?auto=format&fit=crop&q=80&w=1000",
     isFeatured: false
   }
