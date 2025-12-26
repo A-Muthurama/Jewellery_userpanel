@@ -42,24 +42,42 @@
 
 .props-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
     text-align: center;
+    margin-top: 3rem;
+    align-items: stretch;
 }
 
 .prop-item {
-    padding: 2rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .prop-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+    border-color: var(--color-gold-primary);
 }
 
 .prop-title {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     color: var(--color-gold-primary);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.prop-item p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: 400;
 }
 
 @media (max-width: 600px) {
@@ -89,7 +107,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--hero-overlay);
+    background: linear-gradient(to bottom, rgba(250, 248, 245, 0.6), rgba(235, 226, 219, 0.5));
     transition: background 0.5s ease;
 }
 
@@ -119,13 +137,38 @@
 
 .hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/* Fix for Button Visibility in Hero - Dark text on light background */
+.hero-actions .btn-outline {
+    border: 2px solid var(--color-plum);
+    color: var(--color-plum);
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-actions .btn-outline:hover {
+    background-color: var(--color-plum);
+    color: var(--color-white);
+    border-color: var(--color-plum);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 15, 46, 0.3);
+}
+
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 500px;
+        padding: 4rem 1rem;
     }
 }

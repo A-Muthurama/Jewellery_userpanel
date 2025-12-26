@@ -1,27 +1,14 @@
 /* Header Styles */
 .header {
-    background-color: var(--bg-primary);
-    /* Fallback */
-    background-color: rgba(var(--bg-primary-rgb), 0.85);
-    /* Need to define RGB vars or just use loose rgba for now */
-    /* Using specific colors for glass effect based on theme */
+    background-color: rgba(250, 248, 245, 0.95);
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    /* Subtle Gold Border */
-}
-
-/* Theme adaptation for glass effect */
-[data-theme="dark"] .header {
-    background-color: rgba(10, 10, 10, 0.8);
-}
-
-[data-theme="light"] .header {
-    background-color: rgba(255, 252, 245, 0.9);
+    border-bottom: 1px solid rgba(76, 15, 46, 0.15);
+    box-shadow: 0 4px 20px rgba(76, 15, 46, 0.05);
 }
 
 .header-content {
@@ -29,7 +16,6 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    /* Slightly taller for elegance */
     padding: 0 1rem;
 }
 
@@ -40,7 +26,7 @@
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--color-gold-primary);
+    color: var(--color-plum);
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 0.3s ease;
@@ -75,14 +61,14 @@
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: var(--color-gold-primary);
+    background-color: var(--color-plum);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-gold-primary);
+    color: var(--color-plum);
 }
 
 .nav-link:hover::after,
@@ -96,48 +82,22 @@
     gap: 1.2rem;
 }
 
-.theme-toggle {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    padding: 0.6rem;
-    border-radius: 50%;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.theme-toggle:hover {
-    border-color: var(--color-gold-primary);
-    color: var(--color-gold-primary);
-    background-color: rgba(212, 175, 55, 0.1);
-    transform: rotate(15deg);
-}
-
 .btn-vendor {
-    background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-dark));
-    color: #0A0A0A;
-    /* Always dark text for gold button */
+    background: linear-gradient(135deg, var(--color-plum), var(--color-plum-light));
+    color: #FFFFFF;
     padding: 0.7rem 1.4rem;
     border-radius: 30px;
-    /* Pill shape */
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 10px rgba(76, 15, 46, 0.25);
     transition: all 0.3s ease;
-}
-
-[data-theme="light"] .btn-vendor {
-    color: #FFFFFF;
 }
 
 .btn-vendor:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 6px 15px rgba(76, 15, 46, 0.4);
 }
 
 .mobile-menu-btn {
@@ -175,8 +135,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    border-bottom: 2px solid var(--color-gold-primary);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid var(--color-plum);
+    box-shadow: 0 10px 30px rgba(76, 15, 46, 0.15);
     transform: translateY(-20px);
     animation: slideDown 0.3s forwards;
 }
@@ -197,8 +157,8 @@
 }
 
 .mobile-nav-link:hover {
-    color: var(--color-gold-primary);
-    border-color: var(--color-gold-primary);
+    color: var(--color-plum);
+    border-color: var(--color-plum);
 }
 
 @media (max-width: 768px) {

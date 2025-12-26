@@ -59,6 +59,10 @@ const Home = () => {
             <h3 className="prop-title">Real-time Location</h3>
             <p>Find the nearest offers and navigate easily.</p>
           </div>
+          <div className="prop-item card-base">
+            <h3 className="prop-title">Pan India Collection</h3>
+            <p>Platform to see wide variety of designs across India.</p>
+          </div>
         </div>
       </section>
     </div>

@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Gem, Sun, Moon } from "lucide-react";
+import { Menu, X, Gem } from "lucide-react";
 import "./Header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
   const location = useLocation();
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -45,9 +35,7 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+          {/* Theme toggle removed - Forced Light Premium Theme */}
 
           <button className="btn-vendor" onClick={() => alert("Vendor Panel Coming Soon!")}>
             Join as Vendor
