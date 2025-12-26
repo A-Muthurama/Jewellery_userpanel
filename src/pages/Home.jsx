@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Hero Section Merged Here */}
+      {/* Hero Section Merged Here - hero section*/}
       <section className="hero">
         <div className="hero-overlay"></div>
         <div className="container hero-content">
